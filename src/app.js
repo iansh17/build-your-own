@@ -15,10 +15,32 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files
-app.use('/static', express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // API Routes
 app.use('/api/v1', require('./routes'));
+
+// New API route for ideas
+app.post('/api/ideas', (req, res) => {
+  const { idea } = req.body;
+  
+  if (!idea) {
+    return res.status(400).json({ error: 'Idea is required' });
+  }
+  
+  // In a real implementation, this would connect to your AI processing
+  // For now, we'll simulate a successful response
+  res.json({
+    success: true,
+    message: `I understand your idea: "${idea}". This is a great start!`,
+    nextSteps: [
+      "Refine your concept",
+      "Choose features",
+      "Design the experience",
+      "Build and test"
+    ]
+  });
+});
 
 // Health check endpoint
 app.get('/health', (req, res) => {

@@ -17,6 +17,13 @@ MAKE YOUR OWN is an idea-realization platform that transforms your concepts into
 4. **Customize Your Creation**: Make creative choices to personalize your project
 5. **Bring to Life**: Deploy and share your creation with the world
 
+## Web Interface
+The platform features a calm, modern interface focused on ideation:
+- Clean, centered input field asking "What do you want to make?"
+- Simple, approachable design with soft colors and ample spacing
+- Mobile-responsive layout
+- Direct connection to the backend processing engine
+
 ## Technical Foundation
 
 The platform runs on Node.js with a modular architecture that supports various types of projects. The system automatically selects the best approach for your idea while keeping all technical decisions invisible to you.

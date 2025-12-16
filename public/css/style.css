@@ -1,0 +1,208 @@
+/* Calm, modern design for MAKE YOUR OWN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    color: #2d3748;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Hero section */
+.hero {
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #718096;
+    font-weight: 400;
+}
+
+/* Main content area */
+.main-content {
+    margin: 2rem 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.input-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.idea-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    resize: vertical;
+    min-height: 100px;
+    transition: all 0.2s ease;
+    background-color: white;
+    color: #2d3748;
+    font-family: inherit;
+}
+
+.idea-input:focus {
+    outline: none;
+    border-color: #a0aec0;
+    box-shadow: 0 0 0 3px rgba(160, 174, 192, 0.1);
+}
+
+.primary-btn {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
+}
+
+.primary-btn:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+/* Response container */
+.response-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+.response-container.hidden {
+    display: none;
+}
+
+.response-content h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.response-content p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.next-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.next-steps button {
+    background: #edf2f7;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.next-steps button:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e0;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .idea-input {
+        min-height: 120px;
+    }
+    
+    .primary-btn {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* Loading state */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
